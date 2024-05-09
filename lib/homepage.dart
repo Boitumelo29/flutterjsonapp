@@ -5,8 +5,9 @@ import 'package:flutterjsonapp/models/model.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
+  List<Character> characters = [];
 // we use the future because we are fetching from the api and it can be delayed
   Future getTeams() async {
     var response =
