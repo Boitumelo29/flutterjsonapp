@@ -7,8 +7,8 @@ class HomePage extends StatelessWidget {
 // we use the future because we are fetching from the api and it can be delayed
   Future getTeams() async {
     var response =
-        await http.get(Uri.https('api.balldontlie.io', 'io/v1/teams'));
-    print(response.body);
+        await http.get(Uri.https('rickandmortyapi.com', 'api/character/2'));
+    print("my call ${response.body}");
   }
 
   @override
