@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutterjsonapp/models/model.dart';
 import 'package:http/http.dart' as http;
 
 class HomePage extends StatelessWidget {
@@ -14,7 +15,9 @@ class HomePage extends StatelessWidget {
 
     var jsonData = jsonDecode(response.body);
 
-    for (var char in jsonData['results']) {}
+    for (var char in jsonData['results']) {
+      final chart = Character(name: char['name'], species: char['species']);
+    }
   }
 
   @override
